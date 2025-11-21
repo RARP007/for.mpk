@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ajukan Aspirasi - MPK Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/placeholder-logo.svg" alt="Logo MPK">
+                <span>MPK SMA Example</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="#" class="nav-link">Aspirasi</a></li>
+                <li><a href="#" class="nav-link">Tentang</a></li>
+                <li><a href="#" class="nav-link">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <div class="container">
+            <div class="form-wrapper">
+                <div class="form-header">
+                    <h1>Ajukan Aspirasi Baru</h1>
+                    <p>Suara Anda penting untuk kemajuan sekolah kita. Isi form berikut dengan jelas dan lengkap.</p>
+                </div>
+                
+                <form id="aspiration-form" class="aspiration-form">
+                    <!-- Step 1: Basic Information -->
+                    <div class="form-step active">
+                        <div class="form-group">
+                            <label for="title">Judul Aspirasi *</label>
+                            <input type="text" id="title" name="title" required 
+                                   placeholder="Contoh: Penambahan Jam Perpustakaan">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="category">Kategori *</label>
+                            <select id="category" name="category" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="academic">Akademik & Kurikulum</option>
+                                <option value="facility">Fasilitas Sekolah</option>
+                                <option value="extracurricular">Ekstrakurikuler</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Deskripsi Lengkap *</label>
+                            <textarea id="description" name="description" rows="6" required
+                                      placeholder="Jelaskan aspirasi Anda secara detail..."></textarea>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button type="button" class="btn-secondary" onclick="window.location.href='index.html'">
+                            Batal
+                        </button>
+                        <button type="submit" class="btn-primary">
+                            ✅ Ajukan Aspirasi
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="form.js"></script>
+</body>
+</html>
