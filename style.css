@@ -430,3 +430,43 @@ body {
         width: 100%;
     }
 }
+
+/* Urgency Options Styles */
+.urgency-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.urgency-option {
+    cursor: pointer;
+}
+
+.urgency-option input {
+    display: none;
+}
+
+.urgency-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.urgency-option input:checked + .urgency-label {
+    border-color: #2563eb;
+    background: #eff6ff;
+}
+
+.urgency-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.urgency-dot.low { background: #10b981; }
+.urgency-dot.medium { background: #f59e0b; }
+.urgency-dot.high { background: #ef4444; }
