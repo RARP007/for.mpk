@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Aspirasi - MPK Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/placeholder-logo.svg" alt="Logo MPK">
+                <span>MPK SMA Example</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="submit.html" class="nav-link">Ajukan Aspirasi</a></li>
+                <li><a href="aspirations.html" class="nav-link active">Aspirasi</a></li>
+                <li><a href="login.html" class="nav-link">Login Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="aspirations-section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Daftar Aspirasi Siswa</h1>
+                <p>Lihat semua aspirasi yang telah diajukan oleh siswa</p>
+            </div>
+
+            <div class="filter-options">
+                <select id="category-filter">
+                    <option value="">Semua Kategori</option>
+                    <option value="academic">Akademik</option>
+                    <option value="facility">Fasilitas</option>
+                    <option value="extracurricular">Ekstrakurikuler</option>
+                </select>
+                <select id="status-filter">
+                    <option value="">Semua Status</option>
+                    <option value="completed">Selesai</option>
+                    <option value="in_progress">Diproses</option>
+                    <option value="reviewed">Ditinjau</option>
+                </select>
+            </div>
+
+            <div class="aspiration-list" id="public-aspiration-list">
+                <div class="loading">Memuat data aspirasi...</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="aspirations.js"></script>
+</body>
+</html>
