@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - MPK Website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="assets/placeholder-logo.svg" alt="Logo MPK">
+                <span>MPK SMA Example</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Beranda</a></li>
+                <li><a href="aspirations.html" class="nav-link">Aspirasi Public</a></li>
+                <li><a href="admin.html" class="nav-link active">Admin Dashboard</a></li>
+                <li><a href="#" id="logout-btn" class="nav-link">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="admin-section">
+        <div class="container">
+            <div class="admin-header">
+                <h1>Admin Dashboard</h1>
+                <p>Halo, <span id="admin-name">Admin</span>! Kelola aspirasi siswa di sini.</p>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-container">
+                <div class="stat-card">
+                    <h3 id="total-aspirations">0</h3>
+                    <p>Total Aspirasi</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="pending-aspirations">0</h3>
+                    <p>Menunggu Review</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="processed-aspirations">0</h3>
+                    <p>Sudah Diproses</p>
+                </div>
+            </div>
+
+            <!-- Aspirations List -->
+            <div class="section-header">
+                <h2>Semua Aspirasi</h2>
+                <button class="btn-secondary" id="refresh-btn">Refresh Data</button>
+            </div>
+
+            <div class="aspiration-list" id="admin-aspiration-list">
+                <!-- Aspirations will be loaded here by JavaScript -->
+                <div class="loading">Memuat data...</div>
+            </div>
+        </div>
+    </section>
+
+    <script src="admin.js"></script>
+</body>
+</html>
